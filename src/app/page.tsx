@@ -8,7 +8,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Education from "@/components/Education";
+import ExperienceSection from "@/components/ExperienceSection";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,10 +23,10 @@ export default function Home() {
       <main>
         <Hero isLoaded={isLoaded} />
         <AboutSection />
+        <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
         <ContactSection />
-        <Education />
       </main>
       <Footer />
     </div>

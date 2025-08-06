@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Shaik Abdul Aman | Portfolio",
   description: "Modern developer portfolio built with Next.js and Tailwind CSS.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
 };
 

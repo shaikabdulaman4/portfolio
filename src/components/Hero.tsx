@@ -24,7 +24,7 @@ export default function Hero({ isLoaded }: HeroProps) {
           <h6 className="text-4xl md:text-6xl font-bold text-white">
             <Typewriter
               words={[
-                "Hello! I&apos;m Aman",
+                "Hello! Iam Aman",
                 'Front-End Developer',
                 'Web Enthusiast',
               ]}
