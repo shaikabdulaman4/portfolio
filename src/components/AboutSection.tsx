@@ -3,7 +3,7 @@
 import React from 'react'
 import RevealWrapper from '@/components/RevealWrapper'
 import { GiSchoolBag } from "react-icons/gi";
-import { FaGraduationCap} from 'react-icons/fa'
+import { FaGraduationCap } from 'react-icons/fa'
 import { MdComputer } from 'react-icons/md'
 
 export default function AboutSection() {
@@ -37,24 +37,24 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-20 bg-black text-white"
+      className="relative w-full flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-6 lg:px-20 py-16 sm:py-20 bg-black text-white"
     >
       <div className="max-w-6xl mx-auto z-10 w-full">
         {/* ABOUT SECTION */}
         <RevealWrapper>
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text animate-pulse text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text animate-pulse text-center">
             Who Am I?
           </h2>
         </RevealWrapper>
 
         <RevealWrapper delay={0.2}>
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 text-center">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6 text-justify">
             I'm <span className="font-semibold text-white">Shaik Abdul Aman</span>, a passionate full-stack web developer who transforms pixels into powerful digital experiences. With a deep love for futuristic design, clean code, and UI detail, I bring web interfaces to life that not only look stunning but feel unforgettable.
           </p>
         </RevealWrapper>
 
         <RevealWrapper delay={0.4}>
-          <p className="text-md md:text-lg text-gray-400 leading-relaxed text-center">
+          <p className="text-sm sm:text-md md:text-lg text-gray-400 leading-relaxed text-justify">
             My stack includes <span className="text-white">Next.js</span>,{' '}
             <span className="text-white">React</span>,{' '}
             <span className="text-white">Tailwind CSS</span>,{' '}
@@ -64,8 +64,8 @@ export default function AboutSection() {
         </RevealWrapper>
 
         <RevealWrapper delay={0.6}>
-          <div className="mt-10 flex justify-center">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-600 to-red-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-pink-500/50 cursor-default">
+          <div className="mt-8 flex justify-center">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-600 to-red-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-pink-500/50 cursor-default text-center">
               Building the future, one pixel at a time.
             </div>
           </div>
@@ -73,21 +73,19 @@ export default function AboutSection() {
 
         {/* EDUCATION SECTION */}
         <RevealWrapper delay={0.8}>
-          <h3 className="text-3xl md:text-4xl font-bold mt-24 mb-12 text-white text-center relative inline-block">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-16 sm:mt-24 mb-10 text-white text-center relative inline-block">
             <span className="relative z-10">Education</span>
             <span className="absolute inset-0 bg-sky-500 blur-xl opacity-30 rounded-lg -z-10"></span>
           </h3>
 
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {educationList.map((edu, index) => (
               <div
                 key={index}
                 className="group relative h-auto min-h-[300px] flex flex-col items-center text-center p-6 overflow-hidden rounded-lg border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300"
               >
-                <div className="mb-4">
-                  <div className="flex justify-center items-center w-full">
-                    {edu.icon}
-                  </div>
+                <div className="mb-4 flex justify-center items-center w-full">
+                  {edu.icon}
                 </div>
 
                 <h3 className="text-lg font-semibold text-white mb-1">

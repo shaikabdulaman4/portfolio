@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 
 interface RevealWrapperProps {
@@ -14,11 +14,21 @@ export default function RevealWrapper({
   delay = 0,
   direction = "up",
 }: RevealWrapperProps) {
-  const variants = {
+  const variants: Variants = {
     hidden: {
       opacity: 0,
-      y: direction === "up" ? 20 : direction === "down" ? -20 : 0,
-      x: direction === "left" ? 20 : direction === "right" ? -20 : 0,
+      y:
+        direction === "up"
+          ? 15
+          : direction === "down"
+          ? -15
+          : 0,
+      x:
+        direction === "left"
+          ? 15
+          : direction === "right"
+          ? -15
+          : 0,
     },
     visible: {
       opacity: 1,
@@ -27,6 +37,7 @@ export default function RevealWrapper({
       transition: {
         duration: 0.6,
         delay,
+        ease: "easeOut",
       },
     },
   };
@@ -35,7 +46,7 @@ export default function RevealWrapper({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={variants}
     >
       {children}

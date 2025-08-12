@@ -1,12 +1,10 @@
 @import "tailwindcss";
 
-/* Root variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* Dark mode overrides */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -14,7 +12,6 @@
   }
 }
 
-/* Theme variables (for Tailwind inline theme support) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -22,11 +19,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Base styles */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* prevents content getting hidden behind navbar */
-  overflow-x: hidden;       /* removes unwanted horizontal scroll */
+  scroll-padding-top: 80px; /* Prevents content from hiding behind navbar */
+  overflow-x: hidden;       /* Removes unwanted horizontal scroll */
 }
 
 body {
@@ -35,16 +31,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;       /* prevents content overflow */
+  overflow-x: hidden;       /* Prevents horizontal overflow */
 }
 
-/* Utilities */
 .glow-text {
   color: #00f0ff;
-  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+  text-shadow: 
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff,
+    0 0 30px #00f0ff;
 }
 
 .scroll-mt-24 {
   scroll-margin-top: 6rem;
 }
 
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 60px; /* Smaller padding for mobile navbar */
+  }
+
+  body {
+    font-size: 0.95rem; /* Slightly smaller base font for mobile */
+  }
+
+  .glow-text {
+    font-size: 1.2rem; /* Adjust glow text size for smaller screens */
+    text-shadow: 
+      0 0 6px #00f0ff,
+      0 0 12px #00f0ff,
+      0 0 18px #00f0ff;
+  }
+}

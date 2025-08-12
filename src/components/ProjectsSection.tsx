@@ -37,23 +37,31 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="w-full min-h-screen py-20 px-6 sm:px-10 bg-black text-white">
+    <section
+      id="projects"
+      className="w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-10 bg-black text-white"
+    >
       <RevealWrapper>
-        <h2 className="text-center text-5xl font-bold mb-16 text-pink-500">My Projects</h2>
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-10 sm:mb-16 text-pink-500">
+          My Projects
+        </h2>
       </RevealWrapper>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group flex flex-col justify-between bg-gradient-to-b from-[#1a1a1a] to-[#111] border border-neutral-800 rounded-xl p-6 hover:-translate-y-2 transition-transform hover:shadow-lg hover:shadow-pink-500/30 h-full"
+            className="group flex flex-col justify-between bg-gradient-to-b from-[#1a1a1a] to-[#111] border border-neutral-800 rounded-xl p-5 sm:p-6 hover:-translate-y-2 transition-transform hover:shadow-lg hover:shadow-pink-500/30 h-full"
           >
             <div>
-              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-              <p className="text-sm text-gray-300 mb-4">{project.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">{project.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-300 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech, index) => (
-                  <span key={index} className="px-3 py-1 text-xs rounded-full bg-pink-900/50 text-pink-300">
+                  <span
+                    key={index}
+                    className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs rounded-full bg-pink-900/50 text-pink-300"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -64,7 +72,7 @@ const ProjectsSection = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-pink-400 hover:text-pink-300 mt-4 inline-flex items-center gap-1"
+                className="text-xs sm:text-sm text-pink-400 hover:text-pink-300 mt-3 sm:mt-4 inline-flex items-center gap-1"
               >
                 View Project <FiExternalLink />
               </a>
@@ -73,8 +81,8 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      {/* Padding to fill space and prevent footer overlap */}
-      <div className="mt-24" />
+      {/* Padding to prevent footer overlap */}
+      <div className="mt-16 sm:mt-24" />
     </section>
   );
 };
